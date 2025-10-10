@@ -12,5 +12,3 @@ This implementation achieves **O(n)** depth using two recursive components:
 - **Qₙ:** chain of controlled `Rₓ(π / k)` rotations
 
 Combined, they reproduce the full CⁿU without ancillas.
-
----
