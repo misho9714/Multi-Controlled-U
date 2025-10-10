@@ -11,15 +11,6 @@ This implementation achieves **O(n)** depth using two recursive components:
 - **Pₙ(U):** sequence of controlled fractional-power unitaries `U^(1/2ᵏ)`
 - **Qₙ:** chain of controlled `Rₓ(π / k)` rotations
 
-Both combine to reproduce the full CⁿU without ancillas.
+Combined, they reproduce the full CⁿU without ancillas.
 
 ---
-
-## Example
-```python
-import numpy as np
-from qiskit import QuantumCircuit
-
-U = np.array([[1, 0], [0, -1]])  # Pauli-Z
-qc = mcu(5, U)
-qc.decompose(reps=2).draw(output="mpl", style="iqx")
